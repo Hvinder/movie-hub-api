@@ -5,6 +5,7 @@ const Category = require("../model/category");
 
 const router = express.Router();
 
+// Logger
 router.use((req, res, next) => {
   console.log(`${req.method} request received`);
   next();
@@ -40,7 +41,7 @@ router.get("/movie", (req, res) => {
     });
 });
 
-// Add jobs to Database for testing
+// Helper api to add dummy data to database
 router.get("/add-movie", async (req, res) => {
   const name = "Memento";
   const description =
@@ -80,22 +81,5 @@ router.get("/add-movie", async (req, res) => {
     res.send({ message: "success" });
   });
 });
-
-// var query = Model.find().sort('mykey', 1).skip(2).limit(5)
-// query.exec(callback);
-
-// app.get('/api/posts', (req, res) => {
-//     const pageCount = Math.ceil(posts.length / 10);
-//     let page = parseInt(req.query.p);
-//     if (!page) { page = 1;}
-//     if (page > pageCount) {
-//       page = pageCount
-//     }
-//     res.json({
-//       "page": page,
-//       "pageCount": pageCount,
-//       "posts": posts.slice(page * 10 - 10, page * 10)
-//     });
-//   });
 
 module.exports = router;
