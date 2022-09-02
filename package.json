@@ -1,0 +1,19 @@
+{
+  "name": "movie-hub-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Harry",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "mongoose": "^5.13.5",
+    "nodemon": "^2.0.12"
+  }
+}
